@@ -62,6 +62,20 @@ If enough frames are tracked, fatigue is estimated and overlays are drawn:
 The dataset used for training the YOLOv8 model was curated from basketball video footage and annotated using Roboflow. 
 This platform provided a streamlined environment for creating bounding boxes around players and exporting annotations in YOLO format. 
 Annotated images were then used to fine-tune the detection model for optimal performance in sports environments.
+## Dataset Access (from Roboflow)
+
+This project uses a custom basketball player dataset annotated using Roboflow.
+
+To download the YOLOv8-compatible dataset:
+
+```python
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="LqKpTXknZOXpFqSOBqjF")
+project = rf.workspace().project("player-tracking-dv9lo")
+dataset = project.version(1).download("yolov8")
+```
 
 ## 9. Challenges Faced
 - Maintaining tracking accuracy under occlusions  
