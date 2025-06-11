@@ -72,7 +72,7 @@ To download the YOLOv8-compatible dataset:
 !pip install roboflow
 
 from roboflow import Roboflow
-rf = Roboflow(api_key="LqKpTXknZOXpFqSOBqjF")
+rf = Roboflow(api_key="Roboflow key")
 project = rf.workspace().project("player-tracking-dv9lo")
 dataset = project.version(1).download("yolov8")
 ```
